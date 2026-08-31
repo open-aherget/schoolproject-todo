@@ -1,0 +1,6 @@
+services:
+  App\Mapper\:
+    resource: '../src/Mapper/*'
+    public: true
+    autowire: true
+    autoconfigure: true
