@@ -1,10 +1,10 @@
 import React from 'react';
+import TodoList from "./TodoList.jsx";
 
 export default function App() {
     return (
-        <div className="custom-connect-container">
-            <h1>CustomConnect React Frontend</h1>
-            <p>Erfolgreich in Symfony 7 eingebunden.</p>
+        <div style={{ fontFamily: 'system-ui, -apple-system, sans-serif', padding: '20px' }}>
+            <TodoList />
         </div>
     );
 }

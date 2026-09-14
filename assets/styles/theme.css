@@ -1,0 +1,48 @@
+:root {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f9fafb;
+    --text-primary: #1f2937;
+    --text-muted: #9ca3af;
+    --border-color: #e5e7eb;
+    --brand-primary: #ff7a59;
+    --brand-hover: #e56a4e;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        --bg-primary: #111827;
+        --bg-secondary: #1f2937;
+        --text-primary: #f9fafb;
+        --text-muted: #9ca3af;
+        --border-color: #374151;
+        --brand-primary: #ff7a59;
+        --brand-hover: #e56a4e;
+    }
+}
+
+[data-theme="dark"] {
+    --bg-primary: #111827;
+    --bg-secondary: #1f2937;
+    --text-primary: #f9fafb;
+    --text-muted: #9ca3af;
+    --border-color: #374151;
+    --brand-primary: #ff7a59;
+    --brand-hover: #e56a4e;
+}
+
+[data-theme="light"] {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f9fafb;
+    --text-primary: #1f2937;
+    --text-muted: #9ca3af;
+    --border-color: #e5e7eb;
+    --brand-primary: #ff7a59;
+    --brand-hover: #e56a4e;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.2s ease, color 0.2s ease;
+    margin: 0;
+}
