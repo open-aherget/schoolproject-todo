@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}CustomConnect App{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {{ vite_entry_link_tags('app') }}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {{ vite_entry_script_tags('app', { dependency: 'react' }) }}
+{% endblock %}
+
+{% block body %}
+    <div id="react-root"></div>
+{% endblock %}
