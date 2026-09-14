@@ -1,8 +1,15 @@
-# HubSpot Integration Template
+# Schul Prohekt ToDo
 
-## Übersicht
+## Workflow für Entwicklung und Deployment
 
-Diese Vorlage ermöglicht eine einfache und flexible Anbindung von HubSpot an dein System.  
-Das System ist so aufgebaut, dass du Webhook-Handler-Klassen für eingehende Events anlegst, Mapping-Klassen für die Datenübersetzung nutzt und Message Handler für die Übergabe an HubSpot.
+### Entwicklung (Local Dev):
 
----
+Vite Dev Server starten: npm run dev
+
+Symfony Server starten: symfony server:start
+
+### Produktion (Deployment):
+
+Assets kompilieren: npm run build
+
+Die generierten Build-Artefakte landen in public/build/ und werden über das Twig-Bundle automatisch eingebunden.
