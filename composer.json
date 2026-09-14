@@ -30,7 +30,8 @@
         "hubspot/api-client": "^13.0",
         "symfony/scheduler": "^7.3",
         "dragonmantank/cron-expression": "^3.4",
-        "symfony/security-bundle": "^7.3"
+        "symfony/security-bundle": "^7.3",
+        "pentatrion/vite-bundle": "^8.2"
     },
     "config": {
         "allow-plugins": {
