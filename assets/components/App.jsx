@@ -1,10 +1,15 @@
 import React from 'react';
-import TodoList from "./TodoList.jsx";
+import Layout from './Layout/Layout';
+import TodoList from './TodoList/TodoList';
+import '../styles/theme.css';
 
+/**
+ * Root application component.
+ */
 export default function App() {
     return (
-        <div style={{ fontFamily: 'system-ui, -apple-system, sans-serif', padding: '20px' }}>
+        <Layout>
             <TodoList />
-        </div>
+        </Layout>
     );
 }

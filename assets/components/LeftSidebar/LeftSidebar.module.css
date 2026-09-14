@@ -1,0 +1,35 @@
+.sidebar {
+    position: fixed;
+    top: var(--header-height);
+    bottom: 0;
+    left: 0;
+    width: var(--sidebar-width);
+    background-color: var(--bg-primary);
+    border-right: 1px solid var(--border-color);
+    transition: transform 0.3s ease;
+    z-index: 100;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateX(-100%);
+}
+
+.open {
+    transform: translateX(0);
+}
+
+.content {
+    padding: 20px;
+}
+
+.heading {
+    margin-top: 0;
+    color: var(--text-primary);
+}
+
+.section {
+    margin-top: 20px;
+}
+
+.label {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}

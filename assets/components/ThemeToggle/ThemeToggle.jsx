@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import styles from './ThemeToggle.module.css';
 
 /**
- * Toggles the application theme between light, dark, and system modes.
+ * Toggles application theme between system, dark, and light modes.
  */
 export default function ThemeToggle() {
     const [theme, setTheme] = useState(() => {
@@ -20,7 +21,7 @@ export default function ThemeToggle() {
     }, [theme]);
 
     /**
-     * Cycles through available theme options.
+     * Cycles through the available theme states.
      */
     const toggleTheme = () => {
         if (theme === 'system') {
@@ -33,19 +34,7 @@ export default function ThemeToggle() {
     };
 
     return (
-        <button
-            onClick={toggleTheme}
-            style={{
-                padding: '6px 12px',
-                borderRadius: '6px',
-                border: '1px solid var(--border-color)',
-                backgroundColor: 'var(--bg-secondary)',
-                color: 'var(--text-primary)',
-                cursor: 'pointer',
-                fontSize: '0.8rem',
-                fontWeight: '500'
-            }}
-        >
+        <button onClick={toggleTheme} className={styles.button}>
             Mode: {theme.toUpperCase()}
         </button>
     );
