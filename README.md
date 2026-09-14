@@ -1,4 +1,4 @@
-# Schul Prohekt ToDo
+# Schulprojekt
 
 ## Workflow für Entwicklung und Deployment
 
@@ -16,3 +16,4 @@ Assets kompilieren:
 `npm run build`
 
 Die generierten Build-Artefakte landen in public/build/ und werden über das Twig-Bundle automatisch eingebunden.
+
