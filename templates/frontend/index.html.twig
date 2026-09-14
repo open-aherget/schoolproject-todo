@@ -9,7 +9,7 @@
 
 {% block javascripts %}
     {{ parent() }}
-    {{ vite_entry_script_tags('app') }}
+    {{ vite_entry_script_tags('app', { dependency: 'react' }) }}
 {% endblock %}
 
 {% block body %}
