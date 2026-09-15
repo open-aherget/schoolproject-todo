@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import Header from '../Header/Header';
 import LeftSidebar from '../LeftSidebar/LeftSidebar';
 import RightSidebar from '../RightSidebar/RightSidebar';
+import Toast from '../Toast/Toast';
 import styles from './Layout.module.css';
 
 /**
- * Layout component orchestrating header, sidebars, backdrop, and main page content.
+ * Layout component orchestrating header, sidebars, backdrop, toast container, and main content.
  *
  * @param {Object} props
  * @param {React.ReactNode} props.children
@@ -41,6 +42,7 @@ export default function Layout({ children }) {
             <Header onToggleLeft={toggleLeft} onToggleRight={toggleRight} />
             <LeftSidebar isOpen={isLeftOpen} />
             <RightSidebar isOpen={isRightOpen} />
+            <Toast />
 
             {(isLeftOpen || isRightOpen) && (
                 <div className={styles.backdrop} onClick={closeAll} />
