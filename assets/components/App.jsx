@@ -1,10 +1,15 @@
 import React from 'react';
+import Layout from './Layout/Layout';
+import TodoList from './TodoList/TodoList';
+import '../styles/theme.css';
 
+/**
+ * Root application component.
+ */
 export default function App() {
     return (
-        <div className="custom-connect-container">
-            <h1>CustomConnect React Frontend</h1>
-            <p>Erfolgreich in Symfony 7 eingebunden.</p>
-        </div>
+        <Layout>
+            <TodoList />
+        </Layout>
     );
 }

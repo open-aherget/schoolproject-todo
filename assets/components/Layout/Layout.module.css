@@ -1,0 +1,34 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.mainContent {
+    margin-top: var(--header-height);
+    transition: margin-left 0.3s ease, margin-right 0.3s ease;
+    padding: 20px;
+    flex: 1;
+}
+
+.backdrop {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--overlay-bg);
+    z-index: 90;
+}
+
+@media (min-width: 768px) {
+    .shiftLeft {
+        margin-left: var(--sidebar-width);
+    }
+    .shiftRight {
+        margin-right: var(--sidebar-width);
+    }
+    .backdrop {
+        display: none;
+    }
+}
