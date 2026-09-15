@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './TodoItem.module.css';
 
 /**
- * TodoItem component rendering a single task row.
+ * TodoItem component rendering a single task row with multiline support.
  *
  * @param {Object} props
  * @param {Object} props.todo
