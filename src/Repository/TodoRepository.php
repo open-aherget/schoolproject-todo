@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Repository;
 
 use App\Entity\Todo;
@@ -11,6 +13,9 @@ use Doctrine\Persistence\ManagerRegistry;
  */
 class TodoRepository extends ServiceEntityRepository
 {
+    /**
+     * Initializes the repository with the Doctrine manager registry.
+     */
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, Todo::class);
@@ -40,4 +45,13 @@ class TodoRepository extends ServiceEntityRepository
 //            ->getOneOrNullResult()
 //        ;
 //    }
+    /**
+     * Returns all todo items ordered ascending by their identifier.
+     *
+     * @return list<Todo>
+     */
+    public function findAllOrdered(): array
+    {
+        return $this->findBy([], ['id' => 'ASC']);
+    }
 }
