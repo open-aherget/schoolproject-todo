@@ -33,3 +33,21 @@
     text-decoration: line-through;
     color: var(--text-muted);
 }
+
+/* --- NEU HINZUGEFÜGT --- */
+.deleteButton {
+    margin-left: 12px;
+    padding: 4px 8px;
+    background-color: transparent;
+    color: #dc3545;
+    border: 1px solid #dc3545;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: all 0.2s ease;
+}
+
+.deleteButton:hover {
+    background-color: #dc3545;
+    color: #ffffff;
+}

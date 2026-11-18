@@ -61,6 +61,15 @@ export default function TodoList() {
         }
     };
 
+    /**
+     * Removes a todo item from the local state.
+     *
+     * @param {number} id
+     */
+    const handleDelete = (id) => {
+        setTodos(prevTodos => prevTodos.filter(todo => todo.id !== id));
+    };
+
     return (
         <div className={styles.container}>
             <h2 className={styles.header}>CustomConnect Tasks</h2>
@@ -73,7 +82,12 @@ export default function TodoList() {
             ) : (
                 <ul className={styles.list}>
                     {todos.map(todo => (
-                        <TodoItem key={todo.id} todo={todo} onToggle={handleToggle} />
+                        <TodoItem
+                            key={todo.id}
+                            todo={todo}
+                            onToggle={handleToggle}
+                            onDelete={handleDelete}
+                        />
                     ))}
                 </ul>
             )}
