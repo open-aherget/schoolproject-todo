@@ -12,6 +12,7 @@
         }
     ],
     "require": {
+        "php": ">=8.2",
         "symfony/skeleton": "^7.2",
         "symfony/console": "^7.2",
         "symfony/flex": "^2.7",
