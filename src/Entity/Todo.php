@@ -16,51 +16,67 @@ class Todo
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
-    private string $title = '';
+    private ?string $task = null;
 
     #[ORM\Column]
-    private bool $completed = false;
+    private ?bool $isDone = null;
 
-    /**
-     * Gets the unique identifier of the todo item.
-     */
+    #[ORM\Column(nullable: true)]
+    private ?\DateTimeImmutable $createdAt = null;
+
+    #[ORM\ManyToOne(inversedBy: 'todos')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?TodoList $todolist = null;
+
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    /**
-     * Gets the title of the todo item.
-     */
-    public function getTitle(): string
+    public function getTask(): ?string
     {
-        return $this->title;
+        return $this->task;
     }
 
-    /**
-     * Sets the title of the todo item.
-     */
-    public function setTitle(string $title): static
+    public function setTask(string $task): static
     {
-        $this->title = $title;
+        $this->task = $task;
 
         return $this;
     }
 
-    /**
-     * Checks whether the todo item is marked as completed.
-     */
-    public function isCompleted(): bool
+    public function isDone(): ?bool
     {
-        return $this->completed;
+        return $this->isDone;
     }
 
-    /**
-     * Sets the completion state of the todo item.
-     */
-    public function setCompleted(bool $completed): static
+    public function setIsDone(bool $isDone): static
     {
-        $this->completed = $completed;
+        $this->isDone = $isDone;
+
+        return $this;
+    }
+
+    public function getCreatedAt(): ?\DateTimeImmutable
+    {
+        return $this->createdAt;
+    }
+
+    public function setCreatedAt(?\DateTimeImmutable $createdAt): static
+    {
+        $this->createdAt = $createdAt;
+
+        return $this;
+    }
+
+    public function getTodolist(): ?TodoList
+    {
+        return $this->todolist;
+    }
+
+    public function setTodolist(?TodoList $todolist): static
+    {
+        $this->todolist = $todolist;
 
         return $this;
     }
