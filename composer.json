@@ -31,7 +31,8 @@
         "symfony/scheduler": "^7.3",
         "dragonmantank/cron-expression": "^3.4",
         "symfony/security-bundle": "^7.3",
-        "pentatrion/vite-bundle": "^8.2"
+        "pentatrion/vite-bundle": "^8.2",
+        "symfony/var-exporter": "^7.0"
     },
     "config": {
         "allow-plugins": {
